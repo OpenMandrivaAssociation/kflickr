@@ -1,9 +1,7 @@
-%define	__libtoolize true
-
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
-Version:	0.7
-Release:	%mkrel 2
+Version:	0.8
+Release:	%mkrel 1
 Group:		Communications
 License:	GPL
 URL:		http://kflickr.sourceforge.net/
@@ -35,9 +33,9 @@ export QTLIB=$QTDIR/%{_lib}
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std
-mkdir -p  %{buildroot}%{_datadir}/applications
+mkdir -p %{buildroot}%{_datadir}/applications
 mv -f %{buildroot}%{_datadir}/applnk/Graphics/%{name}.desktop %{buildroot}%{_datadir}/applications
-
+	  
 %find_lang %{name}
 
 %post
@@ -73,5 +71,3 @@ mv -f %{buildroot}%{_datadir}/applnk/Graphics/%{name}.desktop %{buildroot}%{_dat
 %{_datadir}/apps/kflickr/icons/hicolor/*/actions/*.png
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/%{name}*
-	   
-
