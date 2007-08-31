@@ -1,11 +1,12 @@
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
 Version:	0.9
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Communications
 License:	GPL
 URL:		http://kflickr.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+Patch0:		kflickr-0.9-fix-invalid-de-comment.patch
 BuildRequires:  kdebase-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -15,6 +16,7 @@ for easy upload of your favourite photos to your Flickr.com account
 
 %prep
 %setup -qn %{name}-%{version}
+%patch0 -p0
 
 %build
 export QTDIR=%{_prefix}/lib/qt3
