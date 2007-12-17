@@ -8,7 +8,6 @@ URL:		http://kflickr.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kflickr-0.9-fix-invalid-de-comment.patch
 BuildRequires:  kdebase-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 KFlickr is a standalone KDE application that allows 
