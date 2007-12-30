@@ -1,12 +1,11 @@
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
-Version:	0.9
-Release:	%mkrel 2
+Version:	0.9.1
+Release:	%mkrel 1
 Group:		Communications
-License:	GPL
+License:	GPLv2+
 URL:		http://kflickr.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		kflickr-0.9-fix-invalid-de-comment.patch
 BuildRequires:  kdebase-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -15,8 +14,7 @@ KFlickr is a standalone KDE application that allows
 for easy upload of your favourite photos to your Flickr.com account
 
 %prep
-%setup -qn %{name}-%{version}
-%patch0 -p0
+%setup -q
 
 %build
 export QTDIR=%{_prefix}/lib/qt3
@@ -33,8 +31,6 @@ export QTLIB=$QTDIR/%{_lib}
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std
-mkdir -p %{buildroot}%{_datadir}/applications
-mv -f %{buildroot}%{_datadir}/applnk/Graphics/%{name}.desktop %{buildroot}%{_datadir}/applications
 	  
 %find_lang %{name}
 
@@ -62,7 +58,7 @@ mv -f %{buildroot}%{_datadir}/applnk/Graphics/%{name}.desktop %{buildroot}%{_dat
 %doc %{_docdir}/HTML/en/%{name}/shot1.png
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(755,root,root) %{_libdir}/kde3/lib%{name}*
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/kde/%{name}.desktop
 %{_datadir}/apps/kflickr/kflickrshell.rc
 %{_datadir}/apps/kflickrpart/kflickrpart.rc
 %{_datadir}/apps/kflickr/*.png
