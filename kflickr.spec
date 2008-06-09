@@ -38,15 +38,11 @@ export QTLIB=$QTDIR/%{_lib}
 
 %post
 %{update_menus}
-%if %mdkversion > 200700
 %update_icon_cache hicolor
-%endif
 
 %postun
 %{clean_menus}
-%if %mdkversion > 200700
 %clean_icon_cache hicolor
-%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
