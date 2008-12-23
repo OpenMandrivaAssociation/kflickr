@@ -1,6 +1,6 @@
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
-Version:	20081202
+Version:	20081222
 Release:	%mkrel 1
 Group:		Communications
 License:	GPLv2+
