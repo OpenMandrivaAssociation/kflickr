@@ -24,7 +24,9 @@ for easy upload of your favourite photos to your Flickr.com account
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std -C build
-	  
+
+%find_lang %name
+
 %if %mdkversion < 200900
 %post
 %{update_menus}
@@ -40,7 +42,7 @@ for easy upload of your favourite photos to your Flickr.com account
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-%files
+%files -f %name.lang
 %defattr(-,root,root,-)
 %_kde_bindir/*
 %_kde_applicationsdir/*.desktop
