@@ -1,11 +1,12 @@
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
 Version:	20081222
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Communications
 License:	GPLv2+
 URL:		http://kflickr.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
+Patch0:		kflickr-20081222-drop-invalid-de.patch
 BuildRequires:  kdelibs4-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -15,6 +16,7 @@ for easy upload of your favourite photos to your Flickr.com account
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %cmake_kde4
