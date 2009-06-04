@@ -8,7 +8,7 @@ URL:		http://kflickr.sourceforge.net/
 Source0:        http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		kflickr-20081222-drop-invalid-de.patch
 BuildRequires:  kdelibs4-devel
-REQUIRES:	qt4-database-plugin-sqlite
+Requires:	qt4-database-plugin-sqlite
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
