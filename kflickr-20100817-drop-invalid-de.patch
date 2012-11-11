@@ -1,0 +1,10 @@
+--- desktop/kflickr.desktop~	2008-12-22 14:52:06.000000000 +0100
++++ desktop/kflickr.desktop	2009-01-29 18:39:29.000000000 +0100
+@@ -3,7 +3,6 @@
+ Name=kFlickr
+ Name[xx]=xxkflickrxx
+ Comment=A standalone Flickr uploader for KDE
+-Comment[de]=Ein Standalone Flickr.com Uploader für KDE
+ Comment[fr]=Une application d'envoi de photos sur Flickr
+ Comment[xx]=xxA standalone Flickr uploader for KDExx
+ Exec=kflickr
