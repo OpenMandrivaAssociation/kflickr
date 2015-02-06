@@ -1,7 +1,7 @@
 Summary:	Permit to easily upload photos to your Flickr.com account
 Name:		kflickr
 Version:	20100817
-Release:	%mkrel 1
+Release:	2
 Group:		Communications
 License:	GPLv2+
 URL:		http://kflickr.sourceforge.net/
